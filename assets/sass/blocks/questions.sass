@@ -1,55 +1,119 @@
 .questions
-	margin-bottom: 156px
-	.btn
-		max-width: 350px
-		margin: 62px auto 0px
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	margin-top: 50px
+	margin-bottom: 160px
 
-	&-box
-		border-top: 1px solid rgba(#193347, 0.5)
+	.btn.btn-orange
+		margin: 0 auto
+
+	&-block
+		&__help 
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+	&-img
+		position: absolute
+		width: auto
+		height: 100%
+		right: 0
+		top: 0
+	&-box 
 		width: 100%
+		list-style: none
+		margin: 0
+		padding: 0
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+		margin: 50px 0
 	&-list
-		border-bottom: 1px solid rgba(#193347, 0.5)
-	&-answer
-		height: 0
-		overflow: hidden
-		transition: all 1s ease 
-		opacity: 0
-		padding: 0px 21px
-		&-active
-			padding: 0px 21px 16px
-			min-height: 30px
-			height: auto
-			opacity: 1
+		border-top: 1px solid #c6ccd1
+		&:last-child
+			border-bottom: 1px solid #c6ccd1
 	&-article
+		box-sizing: border-box
+		width: 100%
+		padding-left: 24px
+		padding-right: 32px
+		padding-top: 16px
+		padding-bottom: 16px
+		display: flex
+		justify-content: flex-start
+		cursor: pointer
+		align-items: center
+		font-style: normal
+		font-size: 18px
+		line-height: 26px
+		color: #252525
 		position: relative
-		padding: 16px 55px 16px 21px
-		font-weight: 400
+		margin: 0
+		h3
+			font-size: 18px	
+			font-weight: normal
+		span
+			display: block
+			width: 32px
+			height: 32px
+			padding: 4px
+			background: transparent
+			position: absolute
+			background-size: cover
+			right: 32px
+			top: 50%
+			transition: 0.5s
+			transform: translateY(-50%)
+			border-radius: 50%
+			&::before
+				position: absolute
+				content: ""
+				width: 24px
+				height: 24px
+				background: url(../../assets/img/arrow.svg) no-repeat center
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				transition: all 0.3s ease
+				filter: invert(1)
+		&-active 
+			span
+				background: #2196F3
+				&::before 
+					filter: invert(0)
+					transform: translate(-50%, -50%) rotate(45deg)
+	&-answer
+		box-sizing: border-box
+		font-size: 18px
+		line-height: 26px
+		color: #21252D
+		padding: 0 24px
+		box-sizing: border-box
+		opacity: 0
+		transform: scale(0.85)
+		display: none
+		padding-top: 26px
+		padding-bottom: 16px
+		margin: 0
+		&-active 
+			animation: animTab 0.3s linear normal forwards
+			display: block
+
+@keyframes animTab
+	0%
+		opacity: 0
+		transform: scale(.96)
+	100%
+		opacity: 1
+		transform: scale(1)
 		
-		line-height: 165.1%
-		&::before
-			content: ''
-			position: absolute
-			right: 18px
-			top: 26px
-			width: 24px
-			height: 2px
-			background: #2196F3
-		&::after
-			content: ''
-			position: absolute
-			right: 29px
-			top: 15px
-			width: 2px
-			height: 24px
-			background: #2196F3
-			transition: all 0.3s ease
-			
-		&-active
-			&::after
-				opacity: 0
-
-
 @media screen and (max-width: 575px)
 	.questions
 		&-article
-			line-height: 120%
+			h3
+				font-size: 16px
+		&-answer
+			p
+				font-size: 14px
+				line-height: 125%

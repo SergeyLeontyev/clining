@@ -86,7 +86,6 @@
   max-width: 442px;
   width: 100%;
   height: 392px;
-  background: url(../img/svg/main-bg.svg) no-repeat center;
   background-size: cover;
   position: absolute;
   left: calc(100% + 40px);

@@ -4,6 +4,17 @@
 	display: flex
 	flex-direction: column
 	z-index: 1
+	&-infoText
+		background: #FFFFAD
+		padding: 15px
+		border-radius: 4px
+		border: 1px solid rgba(0, 0, 0, 0.2)
+		margin-top: 20px
+		p
+			font-size: 14px
+			text-align: center
+			font-weight: bold
+			line-height: 125%
 	.swiper-notification
 		display: none
 	&__cards
@@ -260,7 +271,7 @@
 				display: flex
 				justify-content: center
 				align-items: center
-				width: 20px
+				min-width: 20px
 				height: 20px
 				border: 1px solid #adb5bd
 				border-radius: 5px
@@ -427,7 +438,7 @@
 .mCSB_scrollTools
 	.mCSB_draggerRail
 		width: 2px!important
-		height: 300%!important
+		height: 600%!important
 		margin: -140px auto!important
 
 .areaHideBefore
@@ -479,3 +490,6 @@
 		&__cards
 			margin-bottom: 20px
 			flex-wrap: wrap
+		&-infoText
+			p
+				font-size: 12px
