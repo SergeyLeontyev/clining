@@ -9,11 +9,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: unset;
+  padding-bottom: 100px;
+}
+.certif .swiper-slide {
+  display: block;
+}
+.certif .swiper-slide img {
+  width: 100%;
+}
+.certif .container {
+  padding: 60px 0px;
+  position: relative;
 }
 .certif-img {
   width: 260px;
   height: 150px;
-  background: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,10 +42,19 @@
 }
 .certif-slider {
   width: 100%;
-  position: relative;
+  position: static;
   overflow: hidden;
 }
 .certif-slider .main-slider-nav {
   top: 100%;
   z-index: 2;
+}
+
+@media screen and (max-width: 575px) {
+  .certif-img {
+    width: 100%;
+  }
+  .certif-img img {
+    width: 75%;
+  }
 }

@@ -2,10 +2,19 @@
 	display: flex
 	flex-direction: column
 	align-items: center
+	overflow: unset
+	padding-bottom: 100px
+	.swiper
+		&-slide
+			display: block
+			img
+				width: 100%
+	.container
+		padding: 60px 0px
+		position: relative
 	&-img
 		width: 260px
 		height: 150px
-		background: #000
 		display: flex
 		justify-content: center
 		align-items: center
@@ -15,10 +24,18 @@
 			height: auto
 	&-slider
 		width: 100%
-		position: relative
+		position: static
 		overflow: hidden
+
 		.main
 			&-slider
 				&-nav
 					top: 100%
 					z-index: 2
+
+@media screen and (max-width: 575px)
+	.certif
+		&-img
+			width: 100%
+			img
+				width: 75%

@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
+	<link rel="stylesheet" href="/assets/css/lightgallery.min.css">
 	<link rel="stylesheet" href="/assets/css/style.min.css">
 	<link rel="stylesheet" href="/assets/fonts/fonts.css">
 	<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
@@ -114,7 +115,7 @@
 			</div>
 		</section>
 
-		<section class="price">
+		<!-- <section class="price">
 			<div class="container">
 				<h2>Уборка квартир</h2>
 				<div class="price-sidebar">
@@ -156,7 +157,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 
 		<section class="certif">
@@ -167,27 +168,27 @@
 					<div class="swiper-wrapper">
 						<div class='swiper-slide'>
 							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
+								<img src="/assets/img/license1.webp" alt="">
 							</div>
 						</div>
 						<div class='swiper-slide'>
 							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
+								<img src="/assets/img/license1.webp" alt="">
 							</div>
 						</div>
 						<div class='swiper-slide'>
 							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
+								<img src="/assets/img/license1.webp" alt="">
 							</div>
 						</div>
 						<div class='swiper-slide'>
 							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
+								<img src="/assets/img/license1.webp" alt="">
 							</div>
 						</div>
 						<div class='swiper-slide'>
 							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
+								<img src="/assets/img/license1.webp" alt="">
 							</div>
 						</div>
 					</div>
@@ -200,35 +201,26 @@
 				</div>
 			</div>
 			<div class="container">
-				<h2>Сертификаты</h2>
+				<h2>Гарантии</h2>
 				<div class="certif-slider">
 
-					<div class="swiper-wrapper">
-						<div class='swiper-slide'>
-							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
-							</div>
-						</div>
-						<div class='swiper-slide'>
-							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
-							</div>
-						</div>
-						<div class='swiper-slide'>
-							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
-							</div>
-						</div>
-						<div class='swiper-slide'>
-							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
-							</div>
-						</div>
-						<div class='swiper-slide'>
-							<div class="certif-img">
-															<img src="/assets/img/license1.webp" alt="">
-							</div>
-						</div>
+					<div class="swiper-wrapper" id="certif-gallery">
+						<a class="swiper-slide" href="assets/img/about/img-1.png">
+							<img src="assets/img/license1.webp" alt="">
+						</a>
+						<a class="swiper-slide" href="assets/img/about/img-1.png">
+							<img src="assets/img/license1.webp" alt="">
+						</a>
+						<a class="swiper-slide" href="assets/img/about/img-1.png">
+							<img src="assets/img/license1.webp" alt="">
+						</a>
+						<a class="swiper-slide" href="assets/img/about/img-1.png">
+							<img src="assets/img/license1.webp" alt="">
+						</a>
+						<a class="swiper-slide" href="assets/img/about/img-1.png">
+							<img src="assets/img/license1.webp" alt="">
+						</a>
+
 					</div>
 
 					<div class="main-slider-nav">
@@ -237,7 +229,6 @@
 						<div class="main-button-next"></div>
 					</div>
 				</div>
-
 			</div>
 	</div>
 	</section>
@@ -302,14 +293,14 @@
 
 
 	</div>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js?ver=5.9.5"></script>
 	<script src="/assets/js/filter-category.js"></script>
 	<script src="/assets/js/swiper-bundle.min.js"></script>
+	<script src="/assets/js/lightgallery.min.js"></script>
 
 
 	<script>
-		const swiper2 = new Swiper('.certif-slider', {
-			loop: false,
+		const sliderCerf = new Swiper('.certif-slider', {
 			pagination: {
 				el: '.main-pagination',
 				clickable: true,
@@ -322,15 +313,12 @@
 				// when window width is >= 320px
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 20,
 				},
 				575: {
 					slidesPerView: 2,
-					spaceBetween: 20
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 30
 				},
 				1200: {
 					slidesPerView: 4,
@@ -338,6 +326,10 @@
 				},
 			}
 		});
+	</script>
+
+	<script>
+		$('#certif-gallery').lightGallery({ thumbnail: !0, animateThumb: !1, showThumbByDefault: !1, });
 	</script>
 
 </body>
