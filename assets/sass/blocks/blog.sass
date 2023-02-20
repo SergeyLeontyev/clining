@@ -1,0 +1,208 @@
+.post
+	&-info
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 10px
+	&-header
+		flex-wrap: wrap
+		display: flex
+		flex-direction: column
+		margin-bottom: 0px
+		background: #fff
+		&__img
+			margin-top: 92px
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+			overflow: hidden
+			background: #fff
+	&-past
+		width: 100%
+		display: flex
+		align-items: flex-start
+		a
+			font-weight: 500
+			font-size: 18px
+			line-height: 145%
+			text-align: center
+			color: #2196F3
+			margin-right: 10px
+			&:last-child
+				margin-right: 0px
+	&-tezis
+		margin-bottom: 40px
+		p
+			font-weight: 700
+			font-size: 24px
+			line-height: 110%
+			color: #2196F3
+			width: 100%
+			text-align: left
+			margin-bottom: 0px!important
+	&-warn
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 15px
+		padding: 65px 127px
+		background: #DFF1FF
+		margin-bottom: 60px
+
+	&-content
+		background: #fff
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1)
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
+		width: 100%
+		max-width: none
+		padding: 47px 0px
+		.post
+			&-warn
+				&>p
+					text-align: center
+					font-weight: 400
+					font-size: 24px
+					line-height: 145%
+					color: #0179D9
+					margin: 0px
+		blockquote
+			margin-bottom: 60px
+			p
+				margin-bottom: 0px
+				font-weight: 400
+				font-size: 24px
+				line-height: 145%
+				text-align: center
+				color: #1E1E1E
+		p
+			font-size: 18px
+			line-height: 145%
+			margin-bottom: 27px
+		ul
+			padding-left: 15px
+			margin-bottom: 40px
+			li
+				position: relative
+				font-size: 24px
+				line-height: 145%
+				&::before
+					position: absolute
+					display: block
+					display: flex
+					top: 15px	
+					left: -15px
+					content: ''
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					background: #2196F3
+		.container
+			max-width: 730px	
+			margin: 0 auto
+			display: flex
+			flex-direction: column
+
+
+@media screen and (max-width: 1199px)
+	.post
+		&-info
+		&-header
+			&__img
+				height: 345px
+		&-past
+			a
+				&:last-child
+		&-tezis
+			p
+		&-warn
+		&-content
+			.post
+				&-warn
+					&>p
+			blockquote
+				p
+			p
+			ul
+				li
+			.container
+
+@media screen and (max-width: 991px)
+	.post
+		&-content
+			box-shadow: none
+			background: transparent
+		&-info
+		&-header
+			&__img
+				height: 260px
+
+@media screen and (max-width: 991px)
+	.post
+		&-content
+			box-shadow: none
+			background: transparent
+		&-info
+		&-header
+			&__img
+				height: auto
+
+@media screen and (max-width: 767px)
+	.post
+		&-info
+			flex-direction: column-reverse
+			align-items: flex-start
+			h2
+				margin-bottom: 10px
+			span
+				text-align: left
+		&-content
+			.post
+				&-warn
+					padding: 64px
+					p
+						font-size: 18px
+						
+				&-tezis
+					p
+						font-size: 16px
+			p
+				font-size: 14px
+			blockquote
+				p
+					font-size: 18px
+			ul
+				li
+					font-size: 18px
+					&:before
+						top: 10px
+
+@media screen and (max-width: 575px)
+	.post
+		margin-top: 40px
+		&-header
+			&__img
+				margin-top: 40px
+		&-content
+			.post
+				&-warn
+					padding: 32px
+					p
+						font-size: 14px
+			blockquote
+				p
+					font-size: 14px
+			ul
+				li
+					font-size: 14px
+					&:before
+						top: 7px
+		&-info
+			h2
+				font-size: 24px
+		&-past
+			flex-direction: column
+			a
+				font-size: 14px
+				margin: 0px
